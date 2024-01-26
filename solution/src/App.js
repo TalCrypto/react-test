@@ -38,6 +38,8 @@ function App() {
         if (currentRequest === requestRef.current) {
             setError(res ? null : "This name is invalid");
         }
+    }).catch(e =>{
+      console.error(e);
     });
 };
  
