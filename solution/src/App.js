@@ -41,7 +41,7 @@ function App() {
     }).catch(e =>{
       console.error(e);
     });
-};
+  };
  
 
   const handleChangeName = (e) => {
@@ -86,7 +86,7 @@ function App() {
       </div>
       <div className='flex flex-right my-16'>
         <button onClick={handleClearInputs}>Clear</button>
-        <button onClick={handleAdd} disabled={!!error}>Add</button>
+        <button onClick={handleAdd} disabled={!!error || name === ""}>Add</button>
       </div>
       <table className='my-16'>
         <thead>
